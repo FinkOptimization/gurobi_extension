@@ -46,7 +46,9 @@ def __mainCallback__(model: Model, where: int):
 
 
 class Model(Model):
-    _callbacks = {}
+    def __int__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._callbacks = {}
 
     def addCallback(self, callback, where=None, **kwargs) -> Callback:
         if isinstance(callback, Callback):
