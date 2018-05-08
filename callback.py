@@ -46,7 +46,7 @@ def __mainCallback__(model: Model, where: int):
 
 
 class Model(Model):
-    def __int__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._callbacks = {}
 
